@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Flower Class Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="potential" placeholder="Age" required="required" />
+        <input type="text" name="value_eur" placeholder="Sepal_Width" required="required" />
+		<input type="text" name="wage_eur" placeholder="Petal_Length" required="required" />
+		<input type="text" name="age" placeholder="Petal_Width" required="required" />
+    <input type="text" name="international_reputation" placeholder="Petal_Width" required="required" />
+    <input type="text" name="release_clause_eur" placeholder="Petal_Width" required="required" />
+    <input type="text" name="shooting" placeholder="Petal_Width" required="required" />
+    <input type="text" name="passing" placeholder="Petal_Width" required="required" />
+    <input type="text" name="dribbling" placeholder="Petal_Width" required="required" />
+    <input type="text" name="physic" placeholder="Petal_Width" required="required" />
+    <input type="text" name="attacking_crossing" placeholder="Petal_Width" required="required" />
+    <input type="text" name="attacking_short_passing" placeholder="Petal_Width" required="required" />
+    <input type="text" name="skill_curve" placeholder="Petal_Width" required="required" />
+    <input type="text" name="skill_long_passing" placeholder="Petal_Width" required="required" />
+    <input type="text" name="skill_ball_control" placeholder="Petal_Width" required="required" />
+    <input type="text" name="movement_reactions" placeholder="Petal_Width" required="required" />
+    <input type="text" name="power_shot_power" placeholder="Petal_Width" required="required" />
+    <input type="text" name="power_long_shots" placeholder="Petal_Width" required="required" />
+    <input type="text" name="mentality_aggression" placeholder="Petal_Width" required="required" />
+    <input type="text" name="mentality_vision" placeholder="Petal_Width" required="required" />
+    <input type="text" name="mentality_composure" placeholder="Petal_Width" required="required" />
+    
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
